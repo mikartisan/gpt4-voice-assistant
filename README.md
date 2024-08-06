@@ -4,7 +4,7 @@
 
 ## Features
 
-- Query GPT-4 model to get responses based on user input.
+- Query GPT-4 model to get responses based on voice input.
 - Convert the GPT response into speech using the StreamElements API.
 - Support for different voice options.
 - Display responses and play audio directly in the browser.
