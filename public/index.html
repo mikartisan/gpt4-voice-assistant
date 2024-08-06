@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT (Text-To-Speech)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="bg-indigo-50 min-h-screen md:px-20 pt-6">
+        <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
+            <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">GPT-4 (Voice Assistant)</h1>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Voice Model</h3>
+                    <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex">
+                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <div class="flex items-center ps-3">
+                                <input id="voice-mathew" type="radio" value="Matthew" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500" checked>
+                                <label for="voice-mathew" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mathew</label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <div class="flex items-center ps-3">
+                                <input id="voice-brian" type="radio" value="Brian" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                <label for="voice-brian" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Brian</label>
+                            </div>
+                        </li>
+                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                            <div class="flex items-center ps-3">
+                                <input id="voice-joanna" type="radio" value="Joanna" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                <label for="voice-joanna" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Joanna</label>
+                            </div>
+                        </li>
+                        <li class="w-full dark:border-gray-600">
+                            <div class="flex items-center ps-3">
+                                <input id="voice-salli" type="radio" value="Salli" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                <label for="voice-salli" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Salli</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="loader" style="display: none;">
+                    <img class="w-24 block mx-auto" src="image/loader1.gif" alt="loader">
+                </div>
+
+                <div id="result"></div>
+                <audio id="audio" controls="" style="display: none;">
+                    <source id="source" type="audio/wav" />
+                </audio>
+
+                <button onclick="startSpeechRecognition()" id="mic-button" class="text-white font-bold mx-auto block rounded-full">
+                    <img id="mic-image" class="w-16" src="image/mic-btn.png" alt="">
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
