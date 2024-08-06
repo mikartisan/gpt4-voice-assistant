@@ -1,5 +1,4 @@
 async function startSpeechRecognition() {
-
     // Hide result and audio elements
     document.getElementById('result').style.display = 'none';
     document.getElementById('audio').style.display = 'none';
@@ -44,7 +43,6 @@ async function startSpeechRecognition() {
 
     recognition.start();
 }
-
 
 async function fetchAIResponse(query) {
     const resultDiv = document.getElementById('result');
