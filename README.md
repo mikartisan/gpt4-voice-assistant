@@ -1,6 +1,6 @@
 # GPT-4 Voice Assistant
 
-**GPT-4 Voice Assistant** is a web application that integrates with the GPT-4 API model and text-to-speech services to convert voice queries into spoken audio. The application uses Node.js for the server and JavaScript for the client-side interactions. 
+**GPT-4 Voice Assistant** is a project that integrates with the GPT-4 API model, Web Speech Recognition and text-to-speech services to convert voice queries into spoken audio. The application uses Node.js for the server and JavaScript for the client-side interactions. 
 
 ## Features
 
